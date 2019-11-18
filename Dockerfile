@@ -1,13 +1,13 @@
 FROM node:12.13.0-apline
 
-RUN mkdir -p /srv/app/rent-car-client
-WORKDIR /srv/app/rent-car-client
+RUN mkdir -p /srv/app/darkproject-client
+WORKDIR /srv/app/darkproject-client
 
-COPY package.json /srv/app/rent-car-client
-COPY package-lock.json /srv/app/rent-car-client
+COPY package.json /srv/app/darkproject-client
+COPY package-lock.json /srv/app/darkproject-client
 
 RUN npm install
 
-COPY . /srv/app/rent-car-client
+COPY . /srv/app/darkproject-client
 
 CMD [ "npm", "start" ] 
